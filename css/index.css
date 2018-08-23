@@ -1,0 +1,246 @@
+.container{
+  max-width: 7.5rem;
+  min-height: 13.34rem;
+  margin: 0 auto;
+  text-align: center;
+  font-size: .32rem;
+  background-color: #fafafa;
+}
+/* header */
+.store-coupon-header{
+  position: relative;
+  width: 100%;
+  height: 1rem;
+  line-height: 1rem;
+  background-color: #fff;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+.store-coupon-header p{
+  font-size: .34rem;
+}
+.coupon-callback{
+  position: absolute;
+  top: 0;
+  left: .4rem;
+  width: .8rem;
+  height: .99rem;
+  font-size: .42rem;
+  color: #999;
+  background: url('../images/callback.jpg') no-repeat;
+  background-size: 100%;
+}
+/* 活动底图 */
+.banner{
+  width: 7.5rem;
+  height: 1.8rem;
+  vertical-align: middle;
+}
+.banner>img{
+  width: 7.5rem;
+  height: 1.8rem;
+}
+/* 验证 */
+.store-coupon-login{
+  width: 6rem;
+  max-height: 2rem;
+  margin: 0 auto;
+  font-size:0px;
+}
+.coupon-login-text{
+  min-width: 3.24rem;
+  height: 1.34rem;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.coupon-login-text1{
+  color: #FF8B00;
+  font-family: SourceHanSansCN-Regular;
+  font-size: .36rem;
+  font-weight: 600;
+  line-height: .6rem;
+  letter-spacing: 2px;
+}
+.coupon-login-text2{
+  color: #666;
+  font-size: .24rem;
+  letter-spacing: 1px;
+}
+/* 活动结束 */
+.coupon-login-text2.over{
+  display: none;
+}
+.coupon-login-tel{
+  width: 6rem;
+  height: .8rem;
+  margin-bottom: .2rem;
+  border: 1px solid #ccc;
+  padding-left: 10px;
+  letter-spacing: 3px;
+  font-size: .29rem;
+  color: #999;
+}
+.coupon-login-password{
+  width: 4rem;
+  height: .8rem;
+  border: 1px solid #ccc;
+  padding-left: 10px;
+  letter-spacing: 3px;
+  font-size: .29rem;
+  color: #999;
+  vertical-align: top;
+}
+.getCode{
+  width: 2rem;
+  height: .8rem;
+  background-color: #67b700;
+  font-size: .29rem;
+  color: #fff;
+  outline:none;
+  border: none;
+}
+.couponTel{
+  font-size: .32rem;
+  color: #000;
+}
+/* 通过验证后 */
+.store-coupon-login.heightAuto{
+  height: auto;
+}
+/* 优惠券样式 */
+.store-coupon-list-wrap{
+  min-height: 2rem;
+  margin: 40px 30px 0 30px;
+  overflow: hidden;
+}
+.conpon-inner-wrap{
+  position: relative;
+  height: 2rem;
+  margin-bottom: 20px;
+}
+.conpon-use-info{
+  position: relative;
+  float: left;
+  width: 60%;
+  height: 2rem;
+  color: #fff;
+  text-align: center;
+  background-color: #67b700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.fail{
+  background-color: #ccc;
+}
+.conpon-border{
+  position: absolute;
+  left: 60%;
+  top: 4px;
+  width: 10px;
+  height: 2rem;
+  margin-left: -10px;
+  bottom: 4px;
+  z-index: 5;
+}
+.circle_list>li{  
+    background-color:#fff;  
+    width:.2rem;  
+    height:.2rem;  
+    border-radius:50%;  
+    margin-bottom:10px;
+}
+.conpon-value {
+  position: relative;
+  float: left;
+  width: 40%;
+  height: 2rem;
+  padding-left: 44px;
+  background-color: #ffab47;
+  color: #fff;
+}
+.fail{
+  background-color: #ccc;
+}
+.conpon-showinfo{
+  color: #fff;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  font-family: MicrosoftYaHei;
+  font-size: .53rem;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+.conpon-detail-info{
+  font-size: .2rem;
+  color: #fff;
+  line-height: .3rem;
+  letter-spacing: 3px;
+}
+.conpon-value-inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+.conpon-number {
+  font-family: 'Arial-Black';
+  font-size: 1.17rem;
+  font-weight: bolder;
+}
+.conpon-unit {
+  position: absolute;
+  top: 0.95rem;
+    left: -.2rem;
+  font-size: .24rem;
+}
+/* 领取优惠券按钮
+.store-coupon-receive{
+  width: 5rem;
+  height: .8rem;
+  margin: .5rem auto 0;
+}
+.coupon-receive-button{
+  width: 5rem;
+  height: .8rem;
+  border: 1px solid #92ff06;
+  background-color: #67b700;
+  font-size: .32rem;
+  color: #fff;
+  border-radius: 5px;
+}
+活动结束
+.coupon-receive-button.over{
+  border: none;
+  background-color: #999;
+}
+已经领取
+.coupon-receive-button.received{
+  border: none;
+  background-color: #999;
+}  */
+
+/* 二维码 */
+.store-coupon-qrcode{
+  margin-top: .63rem;
+  padding-bottom: .63rem;
+}
+.qrcode{
+  width: 3.62rem;
+  height: 3.01rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.qrcode img{
+  width: 3.62rem;
+  height: 3.01rem;
+  vertical-align: top;  
+}

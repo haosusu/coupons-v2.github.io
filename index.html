@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>优惠券领取</title>
+  <script src="./js/flexible.js"></script>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+  <div class="container" id="container">
+    <div class="store-coupon-header">
+      <a class="coupon-callback" href="javascript:history.back(-1)"></a>
+      <p>领取优惠券</p>
+    </div>
+    <!-- 活动底图 -->
+    <div class="banner">
+      <img src="" alt="">
+    </div>
+    <!-- 判断领取状态 -->
+    <div class="coupon-login-text">
+      <p class="coupon-login-text1">活动礼包即将到账!</p>
+      <p class="coupon-login-text2">验证手机号领取</p>
+    </div>
+    <!-- 验证 -->
+    <div class="store-coupon-login">
+      <div id="coupon-login-box">
+        <input id="tel" type="number" placeholder="请输入手机号" class="coupon-login-tel" oninput="if(value.length>11)value=value.slice(0,11)">
+        <input id="password" type="password" placeholder="请输入验证码" class="coupon-login-password">
+        <button id="getCode" class="getCode">获取验证码</button>
+      </div>
+      <!-- <p id="couponTel-tgl" class="hide">
+        <span class="couponTel">领券手机号：</span>
+        <span class="couponTel" id="telNumer">18221097297</span>
+      </p> -->
+    </div>
+    <!-- 优惠券 -->
+    <div class="store-coupon-list-wrap">
+      <ul class = 'store-coupon-list'>
+        <li>
+          <div class="conpon-inner-wrap">
+            <div class="conpon-use-info">
+              <div class="conpon-info-wrap-center">
+                <div class="conpon-showinfo">水果优惠券</div>
+                <div class="conpon-detail-info">满888使用</div>
+                <div class="conpon-detail-info">有效期（2018年11日当天有效)</div>
+                <div class="conpon-detail-info">仅限元稹桃礼盒、元稹桃家庭使用</div>
+              </div>
+            </div>
+            <div class="conpon-border">
+              <ul class="circle_list">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+            <div class="conpon-value">
+              <div class="conpon-value-inner">
+                <div class="conpon-value-detail">
+                  <span class="conpon-unit">￥</span>
+                  <span class="conpon-number">500</span>
+                </div>
+              </div>
+            </div>
+          </div>
+      </li>
+      <li>
+        <div class="conpon-inner-wrap">
+          <div class="conpon-use-info">
+            <div class="conpon-info-wrap-center">
+              <div class="conpon-showinfo">水果优惠券</div>
+              <div class="conpon-detail-info">满888使用</div>
+              <div class="conpon-detail-info">有效期（2018年11日当天有效)</div>
+              <div class="conpon-detail-info">仅限元稹桃礼盒、元稹桃家庭使用</div>
+            </div>
+          </div>
+          <div class="conpon-border">
+            <ul class="circle_list">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+          <div class="conpon-value">
+            <div class="conpon-value-inner">
+              <div class="conpon-value-detail">
+                <span class="conpon-unit">￥</span>
+                <span class="conpon-number">500</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="conpon-inner-wrap">
+          <div class="conpon-use-info fail">
+            <div class="conpon-info-wrap-center">
+              <div class="conpon-showinfo">水果优惠券</div>
+              <div class="conpon-detail-info">满888使用</div>
+              <div class="conpon-detail-info">有效期（2018年11日当天有效)</div>
+              <div class="conpon-detail-info">仅限元稹桃礼盒、元稹桃家庭使用</div>
+            </div>
+          </div>
+          <div class="conpon-border">
+            <ul class="circle_list">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+          <div class="conpon-value fail">
+            <div class="conpon-value-inner">
+              <div class="conpon-value-detail">
+                <span class="conpon-unit">￥</span>
+                <span class="conpon-number">500</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      </ul>
+    </div>
+    <!-- 领取按钮 -->
+    <!-- <div class="store-coupon-receive">
+      <button class="coupon-receive-button">立即领取</button>
+    </div> -->
+    <!-- 商城二维码 -->
+    <div class="store-coupon-qrcode">
+      <div class="qrcode">
+        <img src="./images/qrcode.jpg" alt="">
+      </div>
+      <p class="fs12">长按扫码即可立即进入</p>
+      <p class="fs12">农法自然商城</p>
+    </div>
+  </div>
+<script src="./js/zepto.min.js"></script>
+<script src="./js/text.js"></script>
+<script src="./js/index.js"></script>
+</body>
+</html>
