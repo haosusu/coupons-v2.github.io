@@ -245,9 +245,9 @@
 .conpon-showinfo {
   color: #fff;
   display: -webkit-box;
-  /* -webkit-box-orient: vertical; */
+  -webkit-box-orient: vertical;
   text-overflow: ellipsis;
-  /* -webkit-line-clamp: 2; */
+  -webkit-line-clamp: 2;
   overflow: hidden;
   font-family: MicrosoftYaHei;
   font-size: .53rem;
