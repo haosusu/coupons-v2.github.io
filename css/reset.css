@@ -153,6 +153,7 @@ html {
 input[type=button],
 input[type=submit],
 input[type=file],
+input[type=number],
 input[type="text"],
 input,
 button {
