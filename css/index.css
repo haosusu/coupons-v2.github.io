@@ -249,7 +249,7 @@
   text-overflow: ellipsis;
   -webkit-line-clamp: 2;
   overflow: hidden;
-  font-family: MicrosoftYaHei;
+  font-family: 'MicrosoftYaHei';
   font-size: .53rem;
   font-weight: bold;
   letter-spacing: 5px;
@@ -297,7 +297,7 @@
 }
 
 input[disabled].coupon-receive-button {
-  background-color: #a4d466;
+  background-color: #a1d959;
 }
 
 /* 二维码 */
