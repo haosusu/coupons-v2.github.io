@@ -298,7 +298,7 @@
 
 input[disabled].coupon-receive-button {
   background-color: #a4d466;
-  opacity:.9;
+  opacity: 1;
 }
 
 /* 二维码 */
