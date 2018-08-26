@@ -1,54 +1,56 @@
 // 页面加载生成
 // $(function () {
+//   'use strict';
 //   $.ajax({
 //     type: "POST", // 用POST方式传输
 //     dataType: "json", // 数据格式:JSON
 //     url: "forgetPasswdServlet", // 目标地址
 //     success: function (data) {
-//      var template = '';
-//      var imgUrl = data[0].url;
-//      var len = data.length;
-//      for (var i = 0; i < len; i++) {
-//        template += `
-//          <li>
-//            <div class="conpon-inner-wrap">
-//                <div ${ data[i].disabled ? 'class="conpon-use-info fail"' : 'class="conpon-use-info"'}>
-//                <div class="conpon-info-wrap-center">
-//                  <div class="conpon-showinfo">${data[i].name}</div>
-//                  <div class="conpon-detail-info">${data[i].limit}</div>
-//                  <div class="conpon-detail-info">${data[i].time}</div>
-//                  <div class="conpon-detail-info">${data[i].range}</div>
-//                </div>
-//              </div>
-//              <div class="conpon-border">
-//                <ul class="circle_list">
-//                  <li></li>
-//                  <li></li>
-//                  <li></li>
-//                  <li></li>
-//                  <li></li>
-//                  <li></li>
-//                  <li></li>
-//                </ul>
-//              </div>
-//              <div ${ data[i].disabled ? 'class="conpon-value fail"' : 'class="conpon-value"'}>
-//                <div class="conpon-value-inner">
-//                  <div class="conpon-value-detail">
-//                    <span class="conpon-unit">￥</span>
-//                    <span class="conpon-number">${data[i].money}</span>
-//                  </div>
-//                </div>
-//              </div>
-//            </div>
-//          </li>
-//        `;
-//      }  
-//      $('.store-coupon-list').append(template);
-//      $('.banner>img').attr('src', imgUrl);
+//       var template = '';
+//       var imgUrl = data[0].url;
+//       var len = data.length;
+//       for (var i = 0; i < len; i++) {
+//         template += `
+//             <li>
+//               <div class="conpon-inner-wrap">
+//                 <div class="conpon-use-info fail" data-type="${data[i].disabled}">
+//                   <div class="conpon-info-wrap-center">
+//                     <div class="conpon-showinfo">${data[i].name}</div>
+//                     <div class="conpon-detail-info">${data[i].limit}</div>
+//                     <div class="conpon-detail-info">${data[i].time}</div>
+//                     <div class="conpon-detail-info">${data[i].range}</div>
+//                   </div>
+//                 </div>
+//                 <div class="conpon-border">
+//                   <ul class="circle_list">
+//                     <li></li>
+//                     <li></li>
+//                     <li></li>
+//                     <li></li>
+//                     <li></li>
+//                     <li></li>
+//                     <li></li>
+//                     <li></li>
+//                   </ul>
+//                 </div>
+//                 <div class="conpon-value fail" data-type="${data[i].disabled}">
+//                   <div class="conpon-value-inner">
+//                     <div class="conpon-value-detail">
+//                       <span class="conpon-unit">￥</span>
+//                       <span class="conpon-number">${data[i].money}</span>
+//                     </div>
+//                   </div>
+//                 </div>
+//               </div>
+//             </li>
+//           `;
+//        }
+//       $('.store-coupon-list').append(template);
+//       $('.banner>img').attr('src', imgUrl);
 //     }
 //   })
 // })
-// 验证码部分
+// login部分
 $(function () {
   var isPhone = 1;
   $("#getCode").on("click", function () {
@@ -76,10 +78,8 @@ $(function () {
     //   dataType: "json",
     //   success: function (data) {
     //     console.log(data);
-    //     if (data.error_code == 0) {
-    //       alert("发送成功");
-    //     }else {
-    //       alert("网络异常");
+    //     if (data.error_code == 1) {
+    //       alert("网络异常", 1);
     //     }
     //   }
     // });
@@ -124,52 +124,79 @@ function getCookieValue(name) {
     }
   }
 }
-//开始倒计时
+//倒计时
 var countdown;
 function settime(obj) {
   countdown = getCookieValue("secondsremained");
-  if(!document.cookie){
+  if (!document.cookie) {
     countdown = 60;
   }
   var timer = setInterval(function () {
     countdown--;
     $(obj).attr("disabled", true);
-    $(obj).html(countdown + 's')
+    $(obj).val(countdown + 's')
     if (countdown <= 0) {
       clearInterval(timer);
       $(obj).removeAttr("disabled");
-      $(obj).html("请重新获取");
+      $(obj).val("请重新获取");
     }
     editCookie("secondsremained", countdown, countdown + 1);
   }, 1000) //每1000毫秒执行一次
 }
-// 验证码输入事件
+// 立即领取事件
 $(function () {
-  $('#password').bind('input propertychange', doCompare);
-  function doCompare() {
-    var codelast = $('#password').val();//获取输入的验证码
-    var len = codelast.length;
-    if (len == 4) {
-      // $.ajax({
-      //   type: "POST", // 用POST方式传输
-      //   dataType: "text", // 数据格式
-      //   url: "forgetPasswdServlet", // 目标地址
-      //   data: "codelast=" + codelast,
-      //   success: function (data) {
-      //     data = parseInt(data, 10);
-      //     if (data == 1) {
-      //       $('.coupon-login-text1').html('已获得！').css('fontSize', '47px')//验证成功
-      //       $('.coupon-login-text2').html('进入商城即可使用')
-      //     } else if (data == 0) {
-      //       alert('验证码输入错误，请重新输入')
-      //     } else if (data == 2) {
-      //       alert('验证码已失效,请重新获取验证码');
-      //     }else{
-      //       $('.coupon-login-text1').html('活动已经结束！').css('color', '#666').css('fontSize', '47px')
-      //       $('.coupon-login-text2').addClass('over');
-      //     }              
-      //   }
-      // });
+  $('#coupon-login-box').bind('input propertychange', 'input', function () {
+    var tel = $('#tel').val();
+    var password = $('#password').val();
+    if (tel && password) {
+      $('#receive').removeAttr("disabled");
+    } else {
+      $('#receive').attr("disabled", true);
     }
+  })
+  $('#receive').click(doCompare);
+  function doCompare() {
+    // $.ajax({
+    //   type: "POST", // 用POST方式传输
+    //   dataType: "text", // 数据格式
+    //   url: "forgetPasswdServlet", // 目标地址
+    //   data: "codelast=" + codelast,
+    //   success: function (data) {
+    //     data = parseInt(data, 10);
+    //     if (data == 1) {
+    //       $('.coupon-login-text1').html('已获得！').css('fontSize', '47px')//验证成功
+    //       $('.coupon-login-text2').html('进入商城即可使用')
+    //       $('.user-phone-box').removeClass('hide');
+    //       $('.store-coupon-login').addClass('hide')
+    //     } else if (data == 0) {
+    //       alert('验证码输入错误，请重新输入')
+    //     } else if (data == 2) {
+    //       alert('验证码已失效,请重新获取验证码');
+    //     }else if(data == 3){
+    //       $('.store-coupon-login').addClass('hide')
+    //       $('.coupon-login-text1').html('活动已经结束！').css('color', '#666').css('fontSize', '47px')
+    //       $('.coupon-login-text2').addClass('over');
+    //     }else{
+    //       $('.store-coupon-login').addClass('hide')
+    //       $('.coupon-login-text1').html('活动未开始！').css('color', '#666').css('fontSize', '47px')
+    //       $('.coupon-login-text2').addClass('over');
+    //     }
+    //   }
+    // })
   }
 })
+// alert样式
+// 参数custom--原url代替字符
+//参数inenum--换行数
+function customAlertUrl(custom, linenum) {
+  window.alert = function (name) {
+    var hh = '\r\n';
+    var huangNnm = hh.repeat(linenum);
+    iframe = document.createElement("IFRAME");
+    iframe.style.display = "none";
+    iframe.setAttribute("src", 'data:text/plain,');
+    document.documentElement.appendChild(iframe);
+    window.frames[0].window.alert(custom + huangNnm + name);
+    iframe.parentNode.removeChild(iframe);
+  }
+}
