@@ -157,4 +157,6 @@ button {
   cursor: pointer;
   -webkit-appearance: none;
 }
-
+a:active {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
