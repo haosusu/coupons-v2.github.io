@@ -86,7 +86,7 @@ $(function () {
     addCookie("secondsremained", 60, 60); //添加cookie记录,有效时间60s
     settime($("#getCode")); //开始倒计时
   })
-  var v = getCookieValue("secondsremained") ? getCookieValue("secondsremained") : 0;//获取cookie值
+  var v = getCookieValue("secondsremained") ? getCookieValue("secondsremained") : 0; //获取cookie值
   if (v > 0) {
     settime($("#getCode")); //开始倒计时
   }
@@ -126,6 +126,7 @@ function getCookieValue(name) {
 }
 //倒计时
 var countdown;
+
 function settime(obj) {
   countdown = getCookieValue("secondsremained");
   if (!document.cookie) {
@@ -155,6 +156,7 @@ $(function () {
     }
   })
   $('#receive').click(doCompare);
+
   function doCompare() {
     // $.ajax({
     //   type: "POST", // 用POST方式传输
