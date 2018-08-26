@@ -297,7 +297,8 @@
 }
 
 input[disabled].coupon-receive-button {
-  background-color: #67b700;
+  background-color: #a4d466;
+  opacity:.9;
 }
 
 /* 二维码 */
