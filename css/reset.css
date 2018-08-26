@@ -167,3 +167,8 @@ a {
 a:active {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+input:disabled,
+input[disabled] {
+  -webkit-opacity: 1;
+  opacity: 1;
+}
