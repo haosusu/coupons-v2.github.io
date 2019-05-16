@@ -468,7 +468,7 @@
 
   .learn_item {
     width: 30%;
-    height: 1.88rem;
+    height: auto;
     overflow: hidden;
     clip-path: polygon(0 25%,
         50% 0,
