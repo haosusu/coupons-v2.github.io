@@ -1,325 +1,514 @@
-.container {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  text-align: center;
-  font-size: .32rem;
-  background-color: #f3f7ed;
-}
-/* header */
-.store-coupon-header {
-  position: relative;
-  width: 100%;
-  height: 1rem;
-  line-height: 1rem;
-  background-color: #fff;
-  text-align: center;
-  border-bottom: 1px solid #ccc;
-}
+  #box {
+    width: 100%;
+    height: 100%;
+    color: #333;
+    overflow: hidden;
+  }
 
-.store-coupon-header p {
-  font-size: .34rem;
-}
+  .container {
+    height: auto;
+  }
 
-.coupon-callback {
-  position: absolute;
-  top: 0;
-  left: .4rem;
-  width: .8rem;
-  height: .99rem;
-  font-size: .42rem;
-  color: #999;
-  background: url('../images/callback.jpg') no-repeat;
-  background-size: 100%;
-}
+  .wap_nav {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+  }
 
-/* 活动底图 */
+  .wap_nav_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 1rem;
+    padding: 0 .5rem;
+    background-color: rgba(231, 241, 241, 0.8);
+  }
 
-.banner {
-  width: 7.5rem;
-  height: 1.8rem;
-  vertical-align: middle;
-}
+  .wap_nav_box .wap_logo {
+    height: .6rem;
+  }
 
-.banner>img {
-  width: 7.5rem;
-  height: 1.8rem;
-}
+  .wap_navTel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 1rem;
+    height: 1rem;
+  }
 
-/* 验证 */
+  .wapImgTel {
+    width: .44rem;
+  }
 
-.store-coupon-login {
-  width: 6rem;
-  max-height: 3rem;
-  margin: 0 auto;
-  font-size: 0px;
-}
+  .pagination_box {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: .4rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-.coupon-login-text {
-  min-width: 3.24rem;
-  min-height: 1.34rem;
-  margin: 0 auto;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+  .banner_box {
+    width: 100%;
+    height: 3.9rem;
+    margin-top: 1rem;
+  }
 
-.coupon-login-text1 {
-  color: #FF8B00;
-  font-family: SourceHanSansCN-Regular;
-  font-size: .36rem;
-  font-weight: 600;
-  line-height: .6rem;
-  letter-spacing: 2px;
-  margin-top: .3rem;
-}
+  .banner_box img {
+    width: 100%;
+    height: 100%;
+  }
 
-.coupon-login-text2 {
-  color: #666;
-  font-size: .24rem;
-  letter-spacing: 1px;
-  margin-bottom: .3rem;
-}
+  .about_box {
+    width: 100%;
+    padding: .45rem;
+    margin: 0 auto;
+    text-align: center;
+  }
 
-.user-phone-box {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  min-width: 2.95rem;
-  height: .24rem;
-  margin: .27rem 0;
-}
+  .title_sty {
+    font-size: .26rem;
+    margin-bottom: .15rem;
+    font-weight: bold;
+  }
 
-.left-line {
-  width: .48rem;
-  height: .12rem;
-  border-bottom: 3px solid #67b700;
-}
+  .text_lt {
+    padding: 0 .3rem;
+    margin-top: .3rem;
+    font-size: .18rem;
+    text-align: left;
+    line-height: 1.6;
+    opacity: .9;
+  }
 
-.user-phone {
-  width: 1.99rem;
-  height: .24rem;
-  line-height: .24rem;
-  text-align: center;
-  font-size: .3rem;
-  color: #67b700;
-}
+  .room_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    margin-top: .4rem;
+  }
 
-.right-line {
-  width: .48rem;
-  height: .12rem;
-  border-bottom: 3px solid #67b700;
-}
+  .room_box img {
+    width: 48%;
+    height: 2.45rem;
+  }
 
-.user-phone-box.hide {
-  display: none;
-}
+  .advantages_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
 
-/* 活动结束 */
+  .advantages_item {
+    width: 25%;
+    margin-bottom: .2rem;
+  }
 
-.coupon-login-text2.over {
-  display: none;
-}
+  .mg_tp40 {
+    margin-top: .4rem;
+  }
 
-.coupon-login-tel {
-  width: 6rem;
-  height: .8rem;
-  margin-bottom: .2rem;
-  border: 1px solid #ccc;
-  padding-left: .19rem;
-  letter-spacing: 3px;
-  font-size: .29rem;
-  color: #999;
-}
+  .about_box span {
+    display: inline-block;
+    width: 1.04rem;
+    height: 1rem;
+  }
 
-.coupon-login-password {
-  width: 4rem;
-  height: .8rem;
-  border: 1px solid #ccc;
-  padding-left: .19rem;
-  letter-spacing: 3px;
-  font-size: .29rem;
-  color: #999;
-  vertical-align: top;
-}
+  .about_box span img {
+    width: 100%;
+    height: 100%;
+  }
 
-.getCode {
-  width: 2rem;
-  height: .8rem;
-  background-color: #67b700;
-  font-size: .29rem;
-  color: #fff;
-  outline: none;
-  border: none;
-}
+  .advantages_title {
+    margin: .15rem 0 .15rem;
+    font-size: .26rem;
+  }
 
-.couponTel {
-  font-size: .32rem;
-  color: #000;
-}
+  .advantages_content {
+    margin-bottom: .1rem;
+  }
 
-/* 优惠券样式 */
+  .about_content1 {
+    background-color: #e2e9d7;
+    padding-bottom: .7rem;
+  }
 
-.store-coupon-list-wrap {
-  min-height: 2rem;
-  margin: .4rem .3rem 0 .3rem;
-  overflow: hidden;
-}
+  .about_box1 {
+    padding: .6rem 0 .75rem;
+  }
 
-.conpon-inner-wrap {
-  position: relative;
-  height: 2rem;
-  margin-bottom: 20px;
-}
+  .about_box2 {
+    padding-top: .6rem;
+  }
 
-.conpon-use-info {
-  position: relative;
-  float: left;
-  width: 60%;
-  height: 2rem;
-  color: #fff;
-  text-align: center;
-  background-color: #67b700;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+  .about_box3 {
+    padding-top: .5rem;
+  }
 
-.fail[data-type='disabled'] {
-  background-color: #ccc;
-}
+  .about_box1 .title_sty:last-child {
+    margin: 0;
+  }
 
-.conpon-use-info.fail[data-type='nomore'] {
-  background-color: #a4d466;
-}
+  .about_content .swiper-container {
+    width: calc(100% - 1rem);
+    height: 3.98rem;
+    background-color: #e2e9d7;
+    overflow: unset;
+  }
 
-.conpon-value.fail[data-type='nomore'] {
-  background-color: #ffcd91;
-}
+  .swiper-container .swiper-slide {
+    transition: all .3s linear;
+    padding: 0 .1rem;
+  }
 
-.conpon-use-info.fail[data-type='available'] {
-  background-color: #67b700;
-}
+  .swiper-container .swiper-slide div.student_item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: .26rem;
+    background-color: #fff;
+  }
 
-.conpon-value.fail[data-type='available'] {
-  background-color: #ffab47;
-}
+  .student_item img {
+    flex-shrink: 0;
+    width: 2.69rem;
+    height: 100%;
+    margin-right: .2rem;
+  }
 
-.conpon-border {
-  position: absolute;
-  left: 60%;
-  top: 4px;
-  width: .1rem;
-  height: 2rem;
-  margin-left: -.08rem;
-  bottom: 4px;
-  z-index: 5;
-}
+  .student_item p {
+    display: flex;
+    flex-direction: column;
+  }
 
-.circle_list>li {
-  background-color: #FAFAFA;
-  width: .16rem;
-  height: .16rem;
-  border-radius: 50%;
-  margin-bottom: .1rem;
-}
+  .student_item p span {
+    margin-bottom: .3rem;
+    opacity: .9;
+    text-align: center;
+  }
 
-.conpon-value {
-  position: relative;
-  float: left;
-  width: 40%;
-  height: 2rem;
-  padding-left: 44px;
-  background-color: #ffab47;
-  color: #fff;
-}
+  .ft_wt {
+    font-weight: bold;
+  }
 
-.fail {
-  background-color: #ccc;
-}
+  .student_item p span:first-child {
+    margin-top: .2rem;
+    margin-bottom: .25rem;
+    font-size: .3rem;
+    font-weight: bold;
+  }
 
-.conpon-showinfo {
-  color: #fff;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 2;
-  overflow: hidden;
-  font-family: 'MicrosoftYaHei';
-  font-size: .53rem;
-  font-weight: bold;
-  letter-spacing: 5px;
-}
+  .student_item p span:last-child {
+    margin: 0;
+    text-align: left;
+    font-size: .18rem;
+    line-height: 1.6;
+  }
 
-.conpon-detail-info {
-  font-size: .2rem;
-  color: #fff;
-  line-height: .3rem;
-  letter-spacing: 3px;
-}
+  .swiper-slide-active {
+    transition: all .3s linear;
+    transform: scaleY(1.1);
+  }
 
-.conpon-value-inner {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
+  .swiper-pagination-bullets {
+    margin-top: .32rem;
+    text-align: center;
+    padding-top: .3rem;
+  }
 
-.conpon-number {
-  font-family: 'Arial-Black';
-  font-size: 1.17rem;
-  font-weight: bolder;
-}
+  .swiper-pagination-bullet {
+    background-color: #fff !important;
+    opacity: 1 !important;
+    width: .14rem !important;
+    height: .14rem !important;
+    margin-left: .1rem !important;
+  }
 
-.conpon-unit {
-  position: absolute;
-  top: 0.9rem;
-  left: -0.2rem;
-  font-size: .24rem;
-}
+  .swiper-pagination-bullet-active {
+    background-color: #93ac68 !important;
+    opacity: 1 !important;
+    outline: none !important;
+  }
 
-/* 领取优惠券按钮 */
+  .about_content .swiper-container1 {
+    width: calc(100% - 1.2rem);
+    height: 3rem;
+    margin-top: .3rem;
+  }
 
-.coupon-receive-button {
-  width: 6rem;
-  height: .8rem;
-  border: 1px solid #92ff06;
-  background-color: #67b700;
-  font-size: .36rem;
-  color: #fff;
-  border-radius: .05rem;
-  margin-top: .4rem;
-}
+  .swiper-container1 .swiper-slide {
+    background-color: #ccc;
+  }
 
-input[disabled].coupon-receive-button {
-  background-color: #a4d466;
-  opacity: 1;
-}
+  .class_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: .8rem;
+  }
 
-/* 二维码 */
+  .class_item {
+    width: 50%;
+  }
 
-.store-coupon-qrcode {
-  margin-top: .2rem;
-  padding-bottom: .63rem;
-}
+  .class_img {
+    width: 2.85rem;
+    height: 2.85rem;
+    border-radius: 50%;
+    overflow: hidden;
+  }
 
-.qrcode {
-  width: 2.88rem;
-  height: 2.88rem;
-  margin: 0 auto;
-  text-align: center;
-}
+  .class_img img {
+    width: 100%;
+    height: 100%;
+  }
 
-.qrcode img {
-  width: 2.88rem;
-  height: 2.88rem;
-  vertical-align: top;
-}
+  .mb_80 {
+    margin-bottom: .8rem;
+  }
+
+  .class_content p {
+    text-align: left;
+    font-size: .18rem;
+    text-align: left;
+    line-height: 1.6;
+    opacity: .9;
+  }
+
+  .class_content .teacher_title {
+    margin-bottom: .25rem;
+    font-size: .3rem;
+    font-weight: bold;
+  }
+
+  /* 课程介绍 */
+  .tab_box {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .tab_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: .3rem;
+  }
+
+  .tab_item {
+    padding: 0 .2rem;
+    height: .7rem;
+    line-height: .7rem;
+    text-align: center;
+    font-size: .24rem;
+    color: #555;
+    cursor: pointer;
+    margin: 0 .2rem;
+    border-radius: .07rem;
+    border: 1px solid #ccc;
+  }
+
+  .tab_item1 {
+    padding: 0 .2rem;
+    height: .7rem;
+    line-height: .7rem;
+    text-align: center;
+    font-size: .24rem;
+    color: #555;
+    cursor: pointer;
+    margin: 0 .2rem;
+    border-radius: .07rem;
+    border: 1px solid #ccc;
+  }
+
+  .active_tab {
+    background-color: #93ac68;
+    color: #fff;
+    border: none;
+  }
+
+  .box5_container {
+    padding: 0 .42rem .5rem;
+  }
+
+  .box5_item {
+    display: none;
+  }
+
+  .tab {
+    width: 100%;
+    text-align: center;
+  }
+
+  .tab table {
+    width: 100%;
+    border: 1px solid #93ac68;
+    font-size: .18rem;
+    opacity: .9;
+  }
+
+  .tab tr:nth-child(2n+1) {
+    background-color: #e4e3bb;
+  }
+
+  .tab tr:nth-child(1) {
+    height: .32rem;
+    color: #fff;
+    background-color: #93ac68;
+  }
+
+  .tab tr:nth-child(1) td {
+    font-size: .18rem;
+  }
+
+  .tab tr td {
+    width: 10%;
+    height: .28rem;
+    line-height: .28rem;
+  }
+
+  .tab tr td:first-child {
+    width: 20%;
+  }
+
+  .tab1 tr td:nth-child(7) {
+    width: 15%;
+  }
+
+  .tab1 tr td:nth-child(8) {
+    width: 15%;
+  }
+
+  .tab2 tr td {
+    width: 12%;
+  }
+
+  .tab2 tr td:nth-child(1) {
+    width: 18%;
+  }
+
+  .tab2 tr td:nth-child(5) {
+    width: 10%;
+  }
+
+  .school_box {
+    width: 100%;
+    padding: 0 .4rem .4rem;
+    display: none;
+  }
+
+  .school_box img {
+    width: 100%;
+  }
+
+  .active_item {
+    display: block;
+    opacity: 1;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: .6rem .5rem;
+    background: #e2e9d7;
+  }
+
+  .footer_left {
+    margin-right: .3rem;
+  }
+
+  .footer_left p {
+    line-height: 1.6;
+    font-size: .22rem;
+    opacity: .9;
+  }
+
+  .footer_left .copy_sty {
+    font-size: .20rem;
+    margin-top: .4rem;
+    color: #aaa;
+  }
+
+  .ft_20 {
+    font-size: .22rem;
+    opacity: .9;
+    text-align: center;
+    margin-top: .1rem;
+  }
+
+  .learn_box {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: .5rem .42rem 1rem;
+  }
+
+  .learn_item {
+    width: 30%;
+    height: 1.88rem;
+    overflow: hidden;
+    clip-path: polygon(0 25%,
+        50% 0,
+        100% 25%,
+        100% 75%,
+        50% 100%,
+        0 75%);
+    -webkit-clip-path: polygon(0 25%,
+        50% 0,
+        100% 25%,
+        100% 75%,
+        50% 100%,
+        0 75%);
+  }
+
+  .learn_item1 {
+    position: relative;
+    top: -.3rem;
+    left: .5rem;
+  }
+
+  .learn_item2 {
+    position: relative;
+    top: -.3rem;
+    left: -.5rem;
+  }
+
+  .learn_item img {
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 25%,
+        50% 0,
+        100% 25%,
+        100% 75%,
+        50% 100%,
+        0 75%);
+    -webkit-clip-path: polygon(0 25%,
+        50% 0,
+        100% 25%,
+        100% 75%,
+        50% 100%,
+        0 75%);
+  }

@@ -5,161 +5,440 @@
   <meta charset="UTF-8">
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>优惠券领取</title>
+  <!-- <meta name="viewport"
+        content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"> -->
+  <title>新丽汇</title>
   <script src="./js/flexible.js"></script>
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/swiper.min.css">
 </head>
 
-<body>
-  <div class="container" id="container">
-    <div class="store-coupon-header">
-      <a class="coupon-callback" href="javascript:history.back(-1)"></a>
-      <p>领取优惠券</p>
-    </div>
-    <!-- 活动底图 -->
-    <div class="banner">
-      <img src="" alt="">
-    </div>
-    <!-- 判断领取状态 -->
-    <div class="coupon-login-text">
-      <p class="coupon-login-text1">活动礼包即将到账!</p>
-      <div class="user-phone-box hide">
-        <div class="left-line"></div>
-        <div class="user-phone">18221097297</div>
-        <div class="right-line"></div>
+<body class="fix_iphonex">
+  <div id="box">
+    <div class="container">
+      <div class="wap_nav">
+        <div class="wap_nav_box">
+          <img src="./image/logo.png" alt="" class="wap_logo">
+          <a href="tel:17615569866" class="wap_navTel">
+            <img src="./image/ic2.png" class="wapImgTel">
+          </a>
+        </div>
       </div>
-      <p class="coupon-login-text2">验证手机号领取</p>
-    </div>
-    <!-- 验证 -->
-    <div class="store-coupon-login">
-      <div id="coupon-login-box">
-        <input id="tel" type="number" placeholder="请输入手机号" class="coupon-login-tel" oninput="if(value.length>11)value=value.slice(0,11)">
-        <input id="password" type="text" placeholder="请输入验证码" class="coupon-login-password" oninput="if(value.length>4)value=value.slice(0,4)">
-        <input type="submit" value="获取验证码" id="getCode" class="getCode">
-        <input type="submit" disabled="true" value="立即领取" id="receive" class="coupon-receive-button">
+      <div class="banner_box">
+        <img src="./image/banner.jpg" alt="">
       </div>
-      <!-- <p id="couponTel-tgl" class="hide">
-        <span class="couponTel">领券手机号：</span>
-        <span class="couponTel" id="telNumer">18221097297</span>
-      </p> -->
-    </div>
-    <!-- 优惠券 -->
-    <!-- <div class="store-coupon-list-wrap">
-      <ul class='store-coupon-list'>
-        <li>
-          <div class="conpon-inner-wrap">
-            <div class="conpon-use-info">
-              <div class="conpon-info-wrap-center">
-                <div class="conpon-showinfo">水果优惠券</div>
-                <div class="conpon-detail-info">满888使用</div>
-                <div class="conpon-detail-info">有效期（2018年11日当天有效)</div>
-                <div class="conpon-detail-info">仅限元稹桃礼盒、元稹桃家庭使用</div>
+      <div class="about_box">
+        <p class="title_sty">ABOUT US</p>
+        <p class="title_sty">关于我们</p>
+        <p class="text_lt">
+          新丽汇舞蹈学校是长沙丽汇教育咨询有限公司旗下从事专业教育的培训机构。是经县教育局、工商局工商注册部门批准的正规，专业舞蹈培训机构。菏泽单县新丽汇坐落在单县新城区，周边是政府重点打造的文化商业核心区和形象区。
+        </p>
+        <div class="room_box">
+          <img src="./image/company.jpg" alt="">
+          <img src="./image/company1.jpg" alt="">
+        </div>
+      </div>
+      <div class="about_content about_content1">
+        <div class="about_box about_box1">
+          <p class="title_sty">TEACHING RESULTS</p>
+          <p class="title_sty">教学成果</p>
+        </div>
+        <div class="swiper-container" id="swiper1">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="student_item">
+                <img src="./image/students31.jpg" alt="">
+                <p>
+                  <span>李欣</span>
+                  <span class="ft_wt">19届学员（成武一中）</span>
+                  <span>
+                    在我校学习了八个月，取得了优异的成绩,
+                    以全国第158名的成绩被武汉体育大学录取,
+                    以全省第44名的成绩被淮阴师范大学录取,
+                    以全省前30名的成绩被大连艺术学院录取,
+                    以前40名的成绩获得山东省艺术类本科8校联考艺考合格证。</span>
+                </p>
               </div>
             </div>
-            <div class="conpon-border">
-              <ul class="circle_list">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
+            <div class="swiper-slide">
+              <div class="student_item">
+                <img src="./image/students41.jpg" alt="">
+                <p>
+                  <span>苏嘉乐</span>
+                  <span class="ft_wt">19届学员（单县一中）</span>
+                  <span>
+                    在我校学习八个月，取得了优异的成绩,
+                    以全省第2名的成绩被淮阴师范大学录取,
+                    以全省第2名的成绩被淮北师范大学录取,
+                    以全省前30名的成绩被大连艺术学校录取。</span>
+                </p>
+              </div>
             </div>
-            <div class="conpon-value">
-              <div class="conpon-value-inner">
-                <div class="conpon-value-detail">
-                  <span class="conpon-unit">￥</span>
-                  <span class="conpon-number">500</span>
-                </div>
+            <div class="swiper-slide">
+              <div class="student_item">
+                <img src="./image/students51.jpg" alt="">
+                <p>
+                  <span>石楠</span>
+                  <span class="ft_wt">19届学员（巨野一中）</span>
+                  <span>在我校学习了八个月，取得了优异的成绩，
+                    以全省前20名的成绩被大连艺术学院录取，
+                    以全省第185名的成绩获得山东省艺术类本科，
+                    8校联考艺考合格证（大学名称如下）：
+                    山东体育学院、临沂大学、曲阜师范大学、
+                    滨州学院、潍坊学院、泰山学院、菏泽学院、枣庄学院。</span>
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="student_item">
+                <img src="./image/students61.jpg" alt="">
+                <p>
+                  <span>崔闯</span>
+                  <span class="ft_wt">19届学员（定陶一中）</span>
+                  <span>在我校学习了八个月，取得了优异的成绩，
+                    以全省第13名的成绩获得山东省艺术类本科，
+                    8校联考艺考合格证（大学名称如下）：
+                    山东体育学院、临沂大学、曲阜师范大学、
+                    滨州学院、潍坊学院、泰山学院、菏泽学院、枣庄学院。</span>
+                </p>
               </div>
             </div>
           </div>
-        </li>
-        <li>
-          <div class="conpon-inner-wrap">
-            <div class="conpon-use-info">
-              <div class="conpon-info-wrap-center">
-                <div class="conpon-showinfo">水果优惠券</div>
-                <div class="conpon-detail-info">满888使用</div>
-                <div class="conpon-detail-info">有效期（2018年11日当天有效)</div>
-                <div class="conpon-detail-info">仅限元稹桃礼盒、元稹桃家庭使用</div>
-              </div>
-            </div>
-            <div class="conpon-border">
-              <ul class="circle_list">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-            </div>
-            <div class="conpon-value">
-              <div class="conpon-value-inner">
-                <div class="conpon-value-detail">
-                  <span class="conpon-unit">￥</span>
-                  <span class="conpon-number">500</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="conpon-inner-wrap">
-            <div class="conpon-use-info fail">
-              <div class="conpon-info-wrap-center">
-                <div class="conpon-showinfo">水果优惠券</div>
-                <div class="conpon-detail-info">满888使用</div>
-                <div class="conpon-detail-info">有效期（2018年11日当天有效)</div>
-                <div class="conpon-detail-info">仅限元稹桃礼盒、元稹桃家庭使用</div>
-              </div>
-            </div>
-            <div class="conpon-border">
-              <ul class="circle_list">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-            </div>
-            <div class="conpon-value fail">
-              <div class="conpon-value-inner">
-                <div class="conpon-value-detail">
-                  <span class="conpon-unit">￥</span>
-                  <span class="conpon-number">500</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div> -->
-    <!-- 领取按钮 -->
-    <!-- <div class="store-coupon-receive">
-      <button class="coupon-receive-button">立即领取</button>
-    </div> -->
-    <!-- 商城二维码 -->
-    <div class="store-coupon-qrcode">
-      <div class="qrcode">
-        <img src="./images/qrcode.jpg" alt="">
+        </div>
+        <div class="swiper-pagination1"></div>
       </div>
-      <p class="fs12">长按扫码即可立即进入</p>
-      <p class="fs12">农法自然商城</p>
+      <div class="about_content about_content2">
+        <div class="about_box about_box2">
+          <p class="title_sty">OUR ADVANTAGES</p>
+          <p class="title_sty">我们的优势</p>
+          <ul class="advantages_box mg_tp40">
+            <li class="advantages_item">
+              <span><img src="./image/bg1.png" alt=""></span>
+              <p class="advantages_title">品牌优势</p>
+            </li>
+            <li class="advantages_item">
+              <span><img src="./image/bg2.png" alt=""></span>
+              <p class="advantages_title">专业师资</p>
+            </li>
+            <li class="advantages_item">
+              <span><img src="./image/bg3.png" alt=""></span>
+              <p class="advantages_title">专业课程</p>
+            </li>
+            <li class="advantages_item">
+              <span><img src="./image/bg4.png" alt=""></span>
+              <p class="advantages_title">完善设施</p>
+            </li>
+            <li class="advantages_item">
+              <span><img src="./image/bg5.png" alt=""></span>
+              <p class="advantages_title">质量保证</p>
+            </li>
+            <li class="advantages_item">
+              <span><img src="./image/bg6.png" alt=""></span>
+              <p class="advantages_title">人才输出</p>
+            </li>
+            <li class="advantages_item">
+              <span><img src="./image/bg7.png" alt=""></span>
+              <p class="advantages_title">全国联盟</p>
+            </li>
+            <li class="advantages_item">
+              <span><img src="./image/bg8.png" alt=""></span>
+              <p class="advantages_title">认可证书</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="about_content">
+        <div class="about_box">
+          <p class="title_sty">OUR CLASSES</p>
+          <p class="title_sty">新丽汇舞蹈高考集训课程</p>
+        </div>
+        <div class="tab_box">
+          <ul id="tab_list" class="tab_list">
+            <li data-uname="11" class="tab_item active_tab">国标舞魔鬼集训课程</li>
+            <li data-uname="12" class="tab_item">中国舞魔鬼集训课程</li>
+          </ul>
+        </div>
+        <div class="box5_container">
+          <div class="box5_item box5_item1 active_item">
+            <div class="tab tab1">
+              <table>
+                <tr>
+                  <td colspan="8">国标舞 * 课程安排</td>
+                </tr>
+                <tr>
+                  <td>国标舞*精英班</td>
+                  <td>周一</td>
+                  <td>周二</td>
+                  <td>周三</td>
+                  <td>周四</td>
+                  <td>周五</td>
+                  <td>周六</td>
+                  <td>周日</td>
+                </tr>
+                <tr>
+                  <td>07:00</td>
+                  <td colspan="7">起床</td>
+                </tr>
+                <tr>
+                  <td>07:00-08:20</td>
+                  <td>早功</td>
+                  <td>早功</td>
+                  <td>早功</td>
+                  <td>早功</td>
+                  <td>早功</td>
+                  <td colspan="2"></td>
+                </tr>
+                <tr>
+                  <td>08:30-08:50</td>
+                  <td colspan="7">早餐</td>
+                </tr>
+                <tr>
+                  <td>09:00-10:30</td>
+                  <td>摩登</td>
+                  <td>拉丁</td>
+                  <td>芭蕾</td>
+                  <td>摩登</td>
+                  <td>拉丁</td>
+                  <td>文化补习</td>
+                  <td>文化补习</td>
+                </tr>
+                <tr>
+                  <td>10:50-12:20</td>
+                  <td>摩登</td>
+                  <td>拉丁</td>
+                  <td>现代</td>
+                  <td>摩登</td>
+                  <td>拉丁</td>
+                  <td>文化补习</td>
+                  <td>文化补习</td>
+                </tr>
+                <tr>
+                  <td>12:25-12:50</td>
+                  <td colspan="7">午餐</td>
+                </tr>
+                <tr>
+                  <td>13:00-14:40</td>
+                  <td colspan="7">午休</td>
+                </tr>
+                <tr>
+                  <td>15:00-16:30</td>
+                  <td>拉丁</td>
+                  <td>芭蕾</td>
+                  <td>摩登</td>
+                  <td>芭蕾</td>
+                  <td>摩登</td>
+                  <td>文化补习</td>
+                  <td>省联考课</td>
+                </tr>
+                <tr>
+                  <td>16:50-18:20</td>
+                  <td>拉丁</td>
+                  <td>现代</td>
+                  <td>摩登</td>
+                  <td>体能</td>
+                  <td>摩登</td>
+                  <td>文化补习</td>
+                  <td>模拟比赛</td>
+                </tr>
+                <tr>
+                  <td>18:25-18:50</td>
+                  <td colspan="7">晚餐</td>
+                </tr>
+                <tr>
+                  <td>19:30-22:30</td>
+                  <td colspan="7">晚自习</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="box5_item box5_item2">
+            <div class="tab tab2">
+              <table>
+                <tr>
+                  <td colspan="8">中国舞 * 课程安排</td>
+                </tr>
+                <tr>
+                  <td>中国舞*精英班</td>
+                  <td>周一</td>
+                  <td>周二</td>
+                  <td>周三</td>
+                  <td>周四</td>
+                  <td>周五</td>
+                  <td>周六</td>
+                  <td>周日</td>
+                </tr>
+                <tr>
+                  <td>07:00</td>
+                  <td colspan="7">起床</td>
+                </tr>
+                <tr>
+                  <td>07:00-08:20</td>
+                  <td>早功</td>
+                  <td>早功</td>
+                  <td>早功</td>
+                  <td>早功</td>
+                  <td>早功</td>
+                  <td colspan="2"></td>
+                </tr>
+                <tr>
+                  <td>08:30-08:50</td>
+                  <td colspan="7">早餐</td>
+                </tr>
+                <tr>
+                  <td>09:00-10:30</td>
+                  <td>素质</td>
+                  <td>古典基训</td>
+                  <td>素质</td>
+                  <td>素质</td>
+                  <td>古典基训</td>
+                  <td>文化补习</td>
+                  <td>文化补习</td>
+                </tr>
+                <tr>
+                  <td>10:50-12:20</td>
+                  <td>素质</td>
+                  <td>古典基训</td>
+                  <td>技巧</td>
+                  <td>毯功</td>
+                  <td>古典基训</td>
+                  <td>文化补习</td>
+                  <td>文化补习</td>
+                </tr>
+                <tr>
+                  <td>12:25-12:50</td>
+                  <td colspan="7">午餐</td>
+                </tr>
+                <tr>
+                  <td>13:00-14:40</td>
+                  <td colspan="7">午休</td>
+                </tr>
+                <tr>
+                  <td>15:00-16:30</td>
+                  <td>古典基训</td>
+                  <td>技巧</td>
+                  <td>古典基训</td>
+                  <td>素质</td>
+                  <td>技巧</td>
+                  <td>文化补习</td>
+                  <td>统考模拟</td>
+                </tr>
+                <tr>
+                  <td>16:50-18:20</td>
+                  <td>技巧</td>
+                  <td>毯功</td>
+                  <td>古典基训</td>
+                  <td>技巧</td>
+                  <td>毯功</td>
+                  <td>文化补习</td>
+                  <td>统考模拟</td>
+                </tr>
+                <tr>
+                  <td>18:25-18:50</td>
+                  <td colspan="7">晚餐</td>
+                </tr>
+                <tr>
+                  <td>19:30-22:30</td>
+                  <td colspan="7">晚自习</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about_content">
+        <div class="about_box about_box3">
+          <p class="title_sty">TEACHER</p>
+          <p class="title_sty mb_80">新丽汇名师团队 保驾护航</p>
+          <div class="class_box">
+            <div class="class_item class_img"><img src="./image/teacher1.jpg" alt=""></div>
+            <div class="class_item class_content">
+              <p class="teacher_title">明星导师：黄嘉</p>
+              <p>湖南省体育舞蹈高校委员会活动部部长</p>
+              <p>WDC世界舞蹈总会国际级评审</p>
+              <p>湖南大学体育舞蹈教师</p>
+              <p>WDSF世界体育舞蹈公开赛职业第十</p>
+              <p>中国体育舞蹈锦标赛职业拉丁季军</p>
+            </div>
+          </div>
+          <div class="class_box">
+            <div class="class_item class_content">
+              <p class="teacher_title">明星导师：邓晓蕾</p>
+              <p>湖南师范大学音乐学院舞蹈学专业</p>
+              <p>美国孔子学院交流巡演代表者</p>
+              <p>俄罗斯高校交流巡演代表者</p>
+              <p>全国公开赛亚军</p>
+            </div>
+            <div class="class_item class_img"><img src="./image/teacher2.jpg" alt=""></div>
+          </div>
+          <div class="class_box">
+            <div class="class_item class_img"><img src="./image/teacher3.jpg" alt=""></div>
+            <div class="class_item class_content">
+              <p class="teacher_title">明星导师：张茹</p>
+              <p>亚洲第一位黑池世界冠军</p>
+              <p>第79届英国黑池舞蹈节职业新星冠军</p>
+              <p>02-03年中国职业拉丁冠军</p>
+            </div>
+          </div>
+          <div class="class_box">
+            <div class="class_item class_content">
+              <p class="teacher_title">明星导师：孟兆楠</p>
+              <p>上海开放大学体育舞蹈教师</p>
+              <p>上海市青年文联委员</p>
+              <p>世界华人国际标准舞锦标赛职业组冠军</p>
+            </div>
+            <div class="class_item class_img"><img src="./image/teacher4.jpg" alt=""></div>
+          </div>
+        </div>
+      </div>
+      <div class="about_content">
+        <div class="about_box">
+          <p class="title_sty">LEARNING LIVE</p>
+          <p class="title_sty">新丽汇高考集训 课堂实况展示</p>
+        </div>
+        <div class="tab_box">
+          <ul id="tab_list1" class="tab_list">
+            <li data-uname="71" class="tab_item1 active_tab">技巧组合</li>
+            <li data-uname="72" class="tab_item1">软度、基本功</li>
+          </ul>
+        </div>
+        <div class="school_box active_item">
+          <img src="./image/ruandu1_03.jpg" alt="">
+        </div>
+        <div class="school_box">
+          <img src="./image/ruandu1_04.jpg" alt="">
+        </div>
+      </div>
+      <div class="about_content">
+        <div class="about_box">
+          <p class="title_sty">OUR SCHOOL</p>
+          <p class="title_sty">新丽汇教学基地 吃住学一体</p>
+        </div>
+        <div class="learn_box">
+          <div class="learn_item"><img src="./image/room2.jpg" alt=""></div>
+          <div class="learn_item"><img src="./image/room6.jpg" alt=""></div>
+          <div class="learn_item"><img src="./image/room3.jpg" alt=""></div>
+          <div class="learn_item learn_item1"><img src="./image/room7.jpg" alt=""></div>
+          <div class="learn_item learn_item2"><img src="./image/room1.jpg" alt=""></div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer_left">
+          <p>咨询电话： 17615569866</p>
+          <p>学校地址： 单县新政府对面义乌商贸城三楼</p>
+          <p>市场合作： 438366207@qq.com</p>
+          <p class="copy_sty">Copyright © 2019新丽汇舞蹈学校 版权所有</p>
+        </div>
+        <div class="footer_right">
+          <p><img src="./image/erweima.png" alt=""></p>
+          <p class="ft_20">微信公众号</p>
+        </div>
+
+      </div>
     </div>
   </div>
-  <script src="./js/zepto.min.js"></script>
-  <script src="./js/text.js"></script>
+  <script src="./js/swiper.min.js"></script>
   <script src="./js/index.js"></script>
 </body>
+
 </html>
